@@ -3,7 +3,7 @@ import random
 import numpy as np
 import time
 import sys
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 
 '''
@@ -584,115 +584,115 @@ if __name__ == '__main__':
     '''
     PLOTTING
     '''
-    # Example: For dimension=0 (complete graphs), run n in [128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768]
-    # (Adjust as needed or as your machine can handle)
-    list_of_n = [128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768]
-    trials = 5  # run at least 5 times for each n
-    # dimension_func = uniform_random  # dimension=0
+    # # Example: For dimension=0 (complete graphs), run n in [128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768]
+    # # (Adjust as needed or as your machine can handle)
+    # list_of_n = [128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768]
+    # trials = 5  # run at least 5 times for each n
+    # # dimension_func = uniform_random  # dimension=0
     
-    # For demonstration, let's just pick dimension=0
-    results_dim0 = run_experiments(uniform_random, list_of_n, trials)
+    # # For demonstration, let's just pick dimension=0
+    # results_dim0 = run_experiments(uniform_random, list_of_n, trials)
 
-    # Print results in a "table" (just to standard output)
-    print("\nDimension=0, MST Averages:")
-    print("n\tAvg MST Weight")
-    for n in list_of_n:
-        print(f"{n}\t{results_dim0[n]:.6f}")
+    # # Print results in a "table" (just to standard output)
+    # print("\nDimension=0, MST Averages:")
+    # print("n\tAvg MST Weight")
+    # for n in list_of_n:
+    #     print(f"{n}\t{results_dim0[n]:.6f}")
 
-    # Now you could do a basic plot:
-    n_vals = np.array(list_of_n, dtype=float)
-    mst_vals = np.array([results_dim0[n] for n in list_of_n], dtype=float)    
+    # # Now you could do a basic plot:
+    # n_vals = np.array(list_of_n, dtype=float)
+    # mst_vals = np.array([results_dim0[n] for n in list_of_n], dtype=float)    
 
-    plt.figure()
-    plt.plot(n_vals, mst_vals, 'o-', label='Dimension=0')
-    plt.xlabel("Number of vertices n")
-    plt.ylabel("Average MST Weight")
-    plt.title("MST Weight vs. n for dimension=0 (complete graph)")
-    plt.legend()
-    plt.show()
+    # plt.figure()
+    # plt.plot(n_vals, mst_vals, 'o-', label='Dimension=0')
+    # plt.xlabel("Number of vertices n")
+    # plt.ylabel("Average MST Weight")
+    # plt.title("MST Weight vs. n for dimension=0 (complete graph)")
+    # plt.legend()
+    # plt.show()
     
-     # (Repeat similarly for dimension=1, dimension=2, etc.)
-    results_dim1 = run_experiments(hypercube_random, 
-                                   [128, 256, 512, 1024, 2048, 4096, 8192, 
-                                    16384, 32768, 65536, 131072, 262144], trials)
+    #  # (Repeat similarly for dimension=1, dimension=2, etc.)
+    # results_dim1 = run_experiments(hypercube_random, 
+    #                                [128, 256, 512, 1024, 2048, 4096, 8192, 
+    #                                 16384, 32768, 65536, 131072, 262144], trials)
     
-     # Print results in a "table" (just to standard output)
-    print("\nDimension=1, MST Averages:")
-    print("n\tAvg MST Weight")
-    for n in list_of_n:
-        print(f"{n}\t{results_dim1[n]:.6f}")
+    #  # Print results in a "table" (just to standard output)
+    # print("\nDimension=1, MST Averages:")
+    # print("n\tAvg MST Weight")
+    # for n in list_of_n:
+    #     print(f"{n}\t{results_dim1[n]:.6f}")
 
-    # Now you could do a basic plot:
-    n_vals = np.array(list_of_n, dtype=float)
-    mst_vals = np.array([results_dim1[n] for n in list_of_n], dtype=float)    
+    # # Now you could do a basic plot:
+    # n_vals = np.array(list_of_n, dtype=float)
+    # mst_vals = np.array([results_dim1[n] for n in list_of_n], dtype=float)    
 
-    plt.figure()
-    plt.plot(n_vals, mst_vals, 'o-', label='Dimension=1')
-    plt.xlabel("Number of vertices n")
-    plt.ylabel("Average MST Weight")
-    plt.title("MST Weight vs. n for dimension=1 (complete graph)")
-    plt.legend()
-    plt.show()
+    # plt.figure()
+    # plt.plot(n_vals, mst_vals, 'o-', label='Dimension=1')
+    # plt.xlabel("Number of vertices n")
+    # plt.ylabel("Average MST Weight")
+    # plt.title("MST Weight vs. n for dimension=1 (complete graph)")
+    # plt.legend()
+    # plt.show()
     
-    results_dim2 = run_experiments(uniform_random, list_of_n, trials)
+    # results_dim2 = run_experiments(uniform_random, list_of_n, trials)
 
-    # Print results in a "table" (just to standard output)
-    print("\nDimension=2, MST Averages:")
-    print("n\tAvg MST Weight")
-    for n in list_of_n:
-        print(f"{n}\t{results_dim2[n]:.6f}")
+    # # Print results in a "table" (just to standard output)
+    # print("\nDimension=2, MST Averages:")
+    # print("n\tAvg MST Weight")
+    # for n in list_of_n:
+    #     print(f"{n}\t{results_dim2[n]:.6f}")
 
-    # Now you could do a basic plot:
-    n_vals = np.array(list_of_n, dtype=float)
-    mst_vals = np.array([results_dim2[n] for n in list_of_n], dtype=float)    
+    # # Now you could do a basic plot:
+    # n_vals = np.array(list_of_n, dtype=float)
+    # mst_vals = np.array([results_dim2[n] for n in list_of_n], dtype=float)    
 
-    plt.figure()
-    plt.plot(n_vals, mst_vals, 'o-', label='Dimension=2')
-    plt.xlabel("Number of vertices n")
-    plt.ylabel("Average MST Weight")
-    plt.title("MST Weight vs. n for dimension=2 (complete graph)")
-    plt.legend()
-    plt.show()
+    # plt.figure()
+    # plt.plot(n_vals, mst_vals, 'o-', label='Dimension=2')
+    # plt.xlabel("Number of vertices n")
+    # plt.ylabel("Average MST Weight")
+    # plt.title("MST Weight vs. n for dimension=2 (complete graph)")
+    # plt.legend()
+    # plt.show()
     
-    results_dim3 = run_experiments(uniform_random, list_of_n, trials)
+    # results_dim3 = run_experiments(uniform_random, list_of_n, trials)
 
-    # Print results in a "table" (just to standard output)
-    print("\nDimension=3, MST Averages:")
-    print("n\tAvg MST Weight")
-    for n in list_of_n:
-        print(f"{n}\t{results_dim3[n]:.6f}")
+    # # Print results in a "table" (just to standard output)
+    # print("\nDimension=3, MST Averages:")
+    # print("n\tAvg MST Weight")
+    # for n in list_of_n:
+    #     print(f"{n}\t{results_dim3[n]:.6f}")
 
-    # Now you could do a basic plot:
-    n_vals = np.array(list_of_n, dtype=float)
-    mst_vals = np.array([results_dim3[n] for n in list_of_n], dtype=float)    
+    # # Now you could do a basic plot:
+    # n_vals = np.array(list_of_n, dtype=float)
+    # mst_vals = np.array([results_dim3[n] for n in list_of_n], dtype=float)    
 
-    plt.figure()
-    plt.plot(n_vals, mst_vals, 'o-', label='Dimension=3')
-    plt.xlabel("Number of vertices n")
-    plt.ylabel("Average MST Weight")
-    plt.title("MST Weight vs. n for dimension=3 (complete graph)")
-    plt.legend()
-    plt.show()
+    # plt.figure()
+    # plt.plot(n_vals, mst_vals, 'o-', label='Dimension=3')
+    # plt.xlabel("Number of vertices n")
+    # plt.ylabel("Average MST Weight")
+    # plt.title("MST Weight vs. n for dimension=3 (complete graph)")
+    # plt.legend()
+    # plt.show()
     
-    results_dim4 = run_experiments(uniform_random, list_of_n, trials)
+    # results_dim4 = run_experiments(uniform_random, list_of_n, trials)
 
-    # Print results in a "table" (just to standard output)
-    print("\nDimension=4, MST Averages:")
-    print("n\tAvg MST Weight")
-    for n in list_of_n:
-        print(f"{n}\t{results_dim4[n]:.6f}")
+    # # Print results in a "table" (just to standard output)
+    # print("\nDimension=4, MST Averages:")
+    # print("n\tAvg MST Weight")
+    # for n in list_of_n:
+    #     print(f"{n}\t{results_dim4[n]:.6f}")
 
-    # Now you could do a basic plot:
-    n_vals = np.array(list_of_n, dtype=float)
-    mst_vals = np.array([results_dim4[n] for n in list_of_n], dtype=float)    
+    # # Now you could do a basic plot:
+    # n_vals = np.array(list_of_n, dtype=float)
+    # mst_vals = np.array([results_dim4[n] for n in list_of_n], dtype=float)    
 
-    plt.figure()
-    plt.plot(n_vals, mst_vals, 'o-', label='Dimension=4')
-    plt.xlabel("Number of vertices n")
-    plt.ylabel("Average MST Weight")
-    plt.title("MST Weight vs. n for dimension=3 (complete graph)")
-    plt.legend()
-    plt.show()
+    # plt.figure()
+    # plt.plot(n_vals, mst_vals, 'o-', label='Dimension=4')
+    # plt.xlabel("Number of vertices n")
+    # plt.ylabel("Average MST Weight")
+    # plt.title("MST Weight vs. n for dimension=3 (complete graph)")
+    # plt.legend()
+    # plt.show()
     
     
     
